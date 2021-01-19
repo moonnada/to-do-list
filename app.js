@@ -9,6 +9,7 @@ let items = ["Buy Food", "Cook Food" , "Eat Food"];
 app.set('view engine', 'ejs');  //this line of code mush be below of const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static("public"));
 
 app.get("/", function(req,res){
     let today = new Date();
